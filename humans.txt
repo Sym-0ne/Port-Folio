@@ -1,0 +1,22 @@
+/* TEAM */
+Développeur & designer : Simon Boissonnet
+Contact : simon.boissonnet28 [at] gmail.com
+Twitter : (à venir)
+LinkedIn : (à venir)
+GitHub : sym-0ne
+Localisation : Pontgouin (28), France
+
+/* THANKS */
+Rasmus Andersson (Inter font)
+JetBrains (JetBrains Mono font)
+Le Lycée Fulbert de Chartres
+Rossow Group — pour le stage en cours
+
+/* SITE */
+Dernière mise à jour : 2026-04-18
+Langage : Français
+Doctype : HTML5
+IDE : Visual Studio Code
+Stack : HTML5, CSS3, Vanilla JavaScript
+Hébergement : GitHub Pages
+Licence du code : voir LICENSE sur github.com/sym-0ne

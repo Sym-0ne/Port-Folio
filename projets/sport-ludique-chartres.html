@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══════════════════════════════════════════
+       SEO — TITRE & DESCRIPTION
+       ═══════════════════════════════════════════ -->
+  <title>Sport Ludique Chartres — Projet infrastructure BTS SIO SISR</title>
+  <meta name="description" content="Projet d'infrastructure complète (réseau, Active Directory, pare-feux Stormshield &amp; OPNsense, virtualisation Proxmox, supervision Graylog) déployé pour le BTS SIO SISR — Simon Boissonnet, Lycée Fulbert, Chartres.">
+  <meta name="author" content="Simon Boissonnet">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="theme-color" content="#0A0A0A">
+
+  <link rel="canonical" href="https://simonboissonnet.fr/projets/sport-ludique-chartres.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://simonboissonnet.fr/projets/sport-ludique-chartres.html">
+  <meta property="og:site_name" content="Simon Boissonnet — Portfolio">
+  <meta property="og:title" content="Sport Ludique Chartres — Projet infrastructure BTS SIO SISR">
+  <meta property="og:description" content="Déploiement complet d'une infrastructure d'entreprise fictive : AD, pare-feux Stormshield/OPNsense, Proxmox, Graylog, PRTG. Documentation MkDocs publique.">
+  <meta property="og:image" content="https://simonboissonnet.fr/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Simon Boissonnet — Projet infrastructure Sport Ludique Chartres">
+  <meta property="article:author" content="Simon Boissonnet">
+  <meta property="article:section" content="Projets">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sport Ludique Chartres — Projet infrastructure BTS SIO SISR">
+  <meta name="twitter:description" content="Déploiement complet d'une infrastructure d'entreprise fictive : AD, pare-feux Stormshield/OPNsense, Proxmox, Graylog, PRTG.">
+  <meta name="twitter:image" content="https://simonboissonnet.fr/assets/og-image.jpg">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/favicon.svg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <!-- Sitemap -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- ═══════════════════════════════════════════
+       DONNÉES STRUCTURÉES — JSON-LD
+       ═══════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://simonboissonnet.fr/projets/sport-ludique-chartres.html#article",
+        "headline": "Sport Ludique Chartres — Projet infrastructure BTS SIO SISR",
+        "description": "Déploiement d'une infrastructure réseau et système complète pour une société fictive dans le cadre du BTS SIO SISR : Active Directory, pare-feux Stormshield et OPNsense, virtualisation Proxmox, supervision Graylog et PRTG, documentation MkDocs.",
+        "author": { "@id": "https://simonboissonnet.fr/#person" },
+        "publisher": { "@id": "https://simonboissonnet.fr/#person" },
+        "inLanguage": "fr-FR",
+        "url": "https://simonboissonnet.fr/projets/sport-ludique-chartres.html",
+        "mainEntityOfPage": "https://simonboissonnet.fr/projets/sport-ludique-chartres.html",
+        "image": "https://simonboissonnet.fr/assets/og-image.jpg",
+        "about": [
+          "Active Directory",
+          "Stormshield",
+          "OPNsense",
+          "Proxmox",
+          "Graylog",
+          "PRTG",
+          "BTS SIO SISR"
+        ],
+        "keywords": "projet Active Directory étudiant, projet Stormshield OPNsense, projet Docker Proxmox, mise en place PRTG, projet BTS SIO SISR infrastructure, documentation MkDocs, Graylog, supervision réseau"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://simonboissonnet.fr/projets/sport-ludique-chartres.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "https://simonboissonnet.fr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projets",
+            "item": "https://simonboissonnet.fr/#projets"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Sport Ludique Chartres",
+            "item": "https://simonboissonnet.fr/projets/sport-ludique-chartres.html"
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://simonboissonnet.fr/#person",
+        "name": "Simon Boissonnet",
+        "url": "https://simonboissonnet.fr/",
+        "image": "https://simonboissonnet.fr/assets/photo.jpg",
+        "jobTitle": "Étudiant BTS SIO SISR — Futur alternant Licence ASRC",
+        "sameAs": ["https://github.com/sym-0ne"]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip-link -->
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Custom cursor -->
+  <div id="cursor-dot" aria-hidden="true"></div>
+
+  <!-- Mobile overlay -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+       ═══════════════════════════════════════════ -->
+  <nav class="navbar" aria-label="Navigation principale">
+    <div class="container">
+      <a href="/" class="nav-logo" aria-label="Simon Boissonnet — Accueil">SB_</a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="/#experience">Expérience</a></li>
+        <li><a href="/#projets" aria-current="page">Projets</a></li>
+        <li><a href="/#certifications">Certifications</a></li>
+        <li><a href="/#infos">Infos</a></li>
+        <li><a href="/alternance.html">Alternance</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ═══════════════════════════════════════════
+         BREADCRUMB
+         ═══════════════════════════════════════════ -->
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <ol>
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/#projets">Projets</a></li>
+          <li><span aria-current="page">Sport Ludique Chartres</span></li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+         PAGE HERO
+         ═══════════════════════════════════════════ -->
+    <header class="page-hero">
+      <div class="container">
+        <p class="tagline">// Projet scolaire · BTS SIO SISR · 2025-2026</p>
+        <h1>Sport Ludique Chartres — Déploiement d'une infrastructure complète</h1>
+        <p class="lead">
+          Projet technique majeur du BTS SIO option SISR au Lycée Fulbert de Chartres :
+          déploiement, administration et documentation d'une infrastructure réseau et système
+          complète pour une société fictive (SportLudique SARL). L'objectif : simuler le SI
+          d'une PME de 50 postes, avec toutes les contraintes réelles — segmentation réseau,
+          sécurisation, annuaire, supervision, haute disponibilité et documentation.
+        </p>
+        <div class="hero-actions" style="margin-top:28px;">
+          <a href="https://sym-0ne.github.io/sport-ludique-Chartres/" target="_blank" rel="noopener" class="btn btn-primary">
+            Documentation technique complète ↗
+          </a>
+          <a href="https://github.com/sym-0ne" target="_blank" rel="noopener" class="btn btn-outline">
+            GitHub ↗
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════
+         CONTENU
+         ═══════════════════════════════════════════ -->
+    <article class="content">
+      <div class="container">
+
+        <!-- Métadonnées projet -->
+        <div class="kv-grid">
+          <div class="kv">
+            <div class="kv-label">Cadre</div>
+            <div class="kv-value">BTS SIO option SISR<br>Lycée Fulbert, Chartres</div>
+          </div>
+          <div class="kv">
+            <div class="kv-label">Durée</div>
+            <div class="kv-value">Année scolaire 2025-2026</div>
+          </div>
+          <div class="kv">
+            <div class="kv-label">Rôle</div>
+            <div class="kv-value">Administrateur d'infrastructure<br>(solo)</div>
+          </div>
+          <div class="kv">
+            <div class="kv-label">Livrable</div>
+            <div class="kv-value">Infra fonctionnelle + documentation MkDocs publique</div>
+          </div>
+        </div>
+
+        <h2>Contexte</h2>
+        <p>
+          SportLudique SARL est une entreprise fictive imaginée pour le projet. Le cahier des charges
+          simule une PME qui souhaite <strong>externaliser son SI hébergé sur un serveur unique</strong>
+          vers une infrastructure virtualisée, sécurisée, et correctement supervisée. Les contraintes
+          posées étaient volontairement réalistes : budget contraint (pas de solution propriétaire
+          coûteuse quand un équivalent open-source existe), exigence de continuité de service,
+          segmentation des flux, et capacité à accueillir un site distant dans une seconde phase.
+        </p>
+        <p>
+          L'ensemble du travail — conception, déploiement, tests, documentation — a été réalisé
+          en autonomie, avec restitution devant jury.
+        </p>
+
+        <h2>Architecture cible</h2>
+        <p>
+          L'infrastructure déployée segmente le SI en trois zones logiques isolées par pare-feu :
+          un <strong>LAN interne</strong> (postes de travail, serveurs AD, serveurs de fichiers),
+          une <strong>DMZ</strong> (reverse proxy, serveur mail, WordPress public),
+          et une <strong>zone d'administration</strong> (supervision, logs centralisés).
+          Le tout sur un hyperviseur Proxmox avec RAID matériel et snapshots planifiés.
+        </p>
+
+        <!-- Schéma d'architecture simplifié -->
+        <figure style="margin: 32px 0;">
+          <svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="schema-title schema-desc" style="width:100%; height:auto; background:var(--bg-surface); border:1px solid var(--border); border-radius:12px; padding:16px;">
+            <title id="schema-title">Schéma simplifié de la topologie Sport Ludique</title>
+            <desc id="schema-desc">Topologie réseau avec WAN, pare-feu Stormshield, DMZ (reverse proxy, mail, WordPress), LAN (switch core, Active Directory, fichiers, postes), zone admin (supervision PRTG, logs Graylog), hyperviseur Proxmox hébergeant l'ensemble des serveurs.</desc>
+
+            <!-- Styles -->
+            <style>
+              .box { fill: #1E1E1E; stroke: #2A2A2A; stroke-width: 1.5; }
+              .box-accent { fill: #1E1E1E; stroke: #E53935; stroke-width: 2; }
+              .zone { fill: none; stroke: #E53935; stroke-dasharray: 4 4; stroke-width: 1; opacity: .6; }
+              .lbl { fill: #EDEDED; font-family: 'JetBrains Mono', monospace; font-size: 11px; }
+              .lbl-sm { fill: #9E9E9E; font-family: 'JetBrains Mono', monospace; font-size: 9px; }
+              .lbl-accent { fill: #E53935; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; }
+              .link { stroke: #9E9E9E; stroke-width: 1.5; fill: none; }
+              .link-accent { stroke: #E53935; stroke-width: 2; fill: none; }
+            </style>
+
+            <!-- Internet -->
+            <circle cx="400" cy="40" r="22" class="box" />
+            <text x="400" y="44" text-anchor="middle" class="lbl">WAN</text>
+
+            <!-- Lien internet -> firewall -->
+            <line x1="400" y1="62" x2="400" y2="95" class="link-accent" />
+
+            <!-- Firewall -->
+            <rect x="340" y="95" width="120" height="42" rx="6" class="box-accent" />
+            <text x="400" y="112" text-anchor="middle" class="lbl-accent">STORMSHIELD</text>
+            <text x="400" y="126" text-anchor="middle" class="lbl-sm">Pare-feu principal</text>
+
+            <!-- Link vers DMZ et LAN -->
+            <line x1="400" y1="137" x2="400" y2="170" class="link" />
+            <line x1="400" y1="170" x2="160" y2="170" class="link" />
+            <line x1="400" y1="170" x2="640" y2="170" class="link" />
+            <line x1="160" y1="170" x2="160" y2="195" class="link" />
+            <line x1="400" y1="170" x2="400" y2="195" class="link" />
+            <line x1="640" y1="170" x2="640" y2="195" class="link" />
+
+            <!-- Zone DMZ -->
+            <rect x="60" y="190" width="200" height="200" rx="8" class="zone" />
+            <text x="160" y="185" text-anchor="middle" class="lbl-accent">// DMZ</text>
+
+            <rect x="80" y="205" width="160" height="32" rx="4" class="box" />
+            <text x="160" y="225" text-anchor="middle" class="lbl">Reverse Proxy</text>
+
+            <rect x="80" y="247" width="160" height="32" rx="4" class="box" />
+            <text x="160" y="267" text-anchor="middle" class="lbl">Serveur Mail</text>
+
+            <rect x="80" y="289" width="160" height="32" rx="4" class="box" />
+            <text x="160" y="305" text-anchor="middle" class="lbl">WordPress</text>
+            <text x="160" y="316" text-anchor="middle" class="lbl-sm">multisite</text>
+
+            <rect x="80" y="331" width="160" height="32" rx="4" class="box" />
+            <text x="160" y="351" text-anchor="middle" class="lbl">OPNsense (secondaire)</text>
+
+            <!-- Zone LAN -->
+            <rect x="300" y="190" width="200" height="240" rx="8" class="zone" />
+            <text x="400" y="185" text-anchor="middle" class="lbl-accent">// LAN interne</text>
+
+            <rect x="320" y="205" width="160" height="32" rx="4" class="box-accent" />
+            <text x="400" y="225" text-anchor="middle" class="lbl-accent">Switch Core (stack)</text>
+
+            <rect x="320" y="247" width="160" height="32" rx="4" class="box" />
+            <text x="400" y="267" text-anchor="middle" class="lbl">Active Directory</text>
+
+            <rect x="320" y="289" width="160" height="32" rx="4" class="box" />
+            <text x="400" y="305" text-anchor="middle" class="lbl">DNS / DHCP / ADCS</text>
+
+            <rect x="320" y="331" width="160" height="32" rx="4" class="box" />
+            <text x="400" y="351" text-anchor="middle" class="lbl">Fichiers · GLPI</text>
+
+            <rect x="320" y="373" width="160" height="32" rx="4" class="box" />
+            <text x="400" y="393" text-anchor="middle" class="lbl">Postes · Wi-Fi</text>
+
+            <!-- Zone Admin -->
+            <rect x="540" y="190" width="200" height="160" rx="8" class="zone" />
+            <text x="640" y="185" text-anchor="middle" class="lbl-accent">// ADMIN</text>
+
+            <rect x="560" y="205" width="160" height="32" rx="4" class="box" />
+            <text x="640" y="225" text-anchor="middle" class="lbl">PRTG · Supervision</text>
+
+            <rect x="560" y="247" width="160" height="32" rx="4" class="box" />
+            <text x="640" y="267" text-anchor="middle" class="lbl">Graylog · Logs</text>
+
+            <rect x="560" y="289" width="160" height="32" rx="4" class="box" />
+            <text x="640" y="309" text-anchor="middle" class="lbl">Ansible · Scripts</text>
+
+            <!-- Socle Proxmox -->
+            <rect x="60" y="410" width="680" height="36" rx="6" class="box-accent" />
+            <text x="400" y="433" text-anchor="middle" class="lbl-accent">PROXMOX VE · Hyperviseur · RAID · Snapshots</text>
+          </svg>
+          <figcaption style="text-align:center; font-size:.8rem; color:var(--text-secondary); margin-top:12px;">
+            Schéma simplifié de la topologie — tous les éléments sont virtualisés sur un socle Proxmox VE.
+          </figcaption>
+        </figure>
+
+        <h2>Stack technique détaillée</h2>
+
+        <h3>Couche réseau</h3>
+        <ul>
+          <li><strong>Switch core en stack</strong> — deux commutateurs physiquement distincts mais logiquement un seul, pour la résilience. Agrégations <strong>LACP</strong> vers les serveurs critiques.</li>
+          <li><strong>Segmentation par VLAN</strong> — postes de travail, serveurs, Wi-Fi invité, administration, VoIP : chacun dans sa bulle.</li>
+          <li><strong>HSRP</strong> pour la redondance de la passerelle par défaut sur les VLAN critiques.</li>
+          <li><strong>DHCP Snooping</strong> pour empêcher les serveurs DHCP pirates sur le LAN.</li>
+          <li><strong>PAT</strong> en sortie Internet, routage statique entre les VLAN via le pare-feu.</li>
+        </ul>
+
+        <h3>Couche sécurité</h3>
+        <ul>
+          <li><strong>Stormshield en pare-feu principal</strong> — règles explicites par flux, filtrage applicatif, inspection SSL sur les flux sortants postes.</li>
+          <li><strong>OPNsense en pare-feu secondaire</strong> pour isoler la DMZ de certains services sensibles.</li>
+          <li><strong>UFW</strong> sur chaque serveur Linux en défense en profondeur (ceinture + bretelles).</li>
+          <li><strong>Autorité de certification interne (ADCS)</strong> pour émettre les certificats utilisés par les services internes (LDAPS, reverse proxy, RDP).</li>
+          <li><strong>LDAPS obligatoire</strong> — aucune authentification en clair ne sort des contrôleurs de domaine.</li>
+        </ul>
+
+        <h3>Annuaire et services Windows</h3>
+        <ul>
+          <li><strong>Active Directory</strong> — forêt mono-domaine, deux contrôleurs pour la redondance, GPO de durcissement (mots de passe, verrouillage d'écran, restrictions USB).</li>
+          <li><strong>DNS intégré à AD</strong>, zones de recherche directes et inversées.</li>
+          <li><strong>DHCP</strong> centralisé avec réservations pour les équipements réseau.</li>
+          <li><strong>Serveur de fichiers</strong> avec partages structurés par service, permissions NTFS granulaires, redirection de dossiers.</li>
+          <li><strong>GLPI</strong> pour l'inventaire du parc et la gestion des tickets.</li>
+        </ul>
+
+        <h3>Virtualisation</h3>
+        <ul>
+          <li><strong>Proxmox VE</strong> — l'intégralité des serveurs tourne en VM ou en conteneur LXC sur un socle Proxmox.</li>
+          <li><strong>RAID</strong> matériel sur les disques physiques pour la tolérance de panne.</li>
+          <li><strong>Docker</strong> pour certains services applicatifs (environnements de test, outils internes).</li>
+          <li>Snapshots réguliers avant chaque modification critique — retour arrière en quelques minutes.</li>
+        </ul>
+
+        <h3>Supervision et centralisation des logs</h3>
+        <ul>
+          <li><strong>PRTG</strong> — supervision de disponibilité (ping, SNMP), alerting email sur seuils.</li>
+          <li><strong>Graylog</strong> avec <strong>Datanode</strong> — centralisation des logs système et applicatifs de toute l'infrastructure.</li>
+          <li><strong>Rsyslog</strong> sur les Linux et <strong>NXlog</strong> sur les Windows pour faire remonter les événements.</li>
+          <li>Dashboards de vision globale et alertes sur patterns critiques (échecs d'authentification répétés, saturation disque, etc.).</li>
+        </ul>
+
+        <h3>Services applicatifs</h3>
+        <ul>
+          <li><strong>Reverse Proxy</strong> en DMZ pour exposer proprement les services web internes (HTTPS, terminaison SSL, filtrage par IP source).</li>
+          <li><strong>Serveur mail</strong> avec gestion des domaines, comptes utilisateurs, anti-spam.</li>
+          <li><strong>WordPress multisite</strong> pour héberger plusieurs sites de l'entreprise sur une seule instance.</li>
+          <li><strong>Base de données</strong> MySQL / MariaDB pour WordPress et GLPI.</li>
+          <li><strong>NTP</strong> interne pour synchroniser toute l'infra sur une source de temps unique.</li>
+          <li><strong>Wi-Fi</strong> avec segmentation invités / corporate et authentification par certificat en entreprise.</li>
+        </ul>
+
+        <h3>Automatisation</h3>
+        <ul>
+          <li><strong>PowerShell</strong> — scripts de création massive d'utilisateurs AD, audit des comptes inactifs, génération de rapports GPO.</li>
+          <li><strong>Ansible</strong> — déploiement reproductible de configurations sur les serveurs Linux.</li>
+          <li><strong>KNX</strong> — intégration domotique utilisée dans un scénario annexe.</li>
+        </ul>
+
+        <h2>Défis rencontrés</h2>
+        <p>
+          Quelques points qui ont demandé du travail de recherche au-delà du programme scolaire :
+        </p>
+        <ul>
+          <li><strong>Articulation Stormshield / OPNsense</strong> — deux pare-feux avec des logiques de règles différentes, il a fallu clarifier le périmètre de chacun pour éviter les redondances et les trous de sécurité.</li>
+          <li><strong>LDAPS de bout en bout</strong> — générer la chaîne de certificats depuis l'ADCS, la distribuer proprement aux clients, dépanner les erreurs de chaîne de confiance. Formateur.</li>
+          <li><strong>Graylog à l'échelle</strong> — l'ingestion de logs grossit vite, le sizing du Datanode (Elasticsearch/OpenSearch sous-jacent) doit être anticipé.</li>
+          <li><strong>Documentation continue</strong> — écrire la doc MkDocs <em>au fur et à mesure</em> plutôt qu'à la fin a été le choix le plus payant du projet. Tout mettre au propre en une fois aurait été impossible.</li>
+        </ul>
+
+        <h2>Livrables</h2>
+        <ul>
+          <li>Infrastructure fonctionnelle intégralement déployée sur banc de test Proxmox.</li>
+          <li><a href="https://sym-0ne.github.io/sport-ludique-Chartres/" target="_blank" rel="noopener">Documentation technique publique sur GitHub Pages</a> (MkDocs Material) — plus de 40 sections couvrant chaque service.</li>
+          <li>Scripts d'automatisation PowerShell et playbooks Ansible versionnés sur <a href="https://github.com/sym-0ne" target="_blank" rel="noopener">GitHub</a>.</li>
+          <li>Schémas de topologie, matrice de flux, plan d'adressage.</li>
+        </ul>
+
+        <h2>Captures d'écran</h2>
+        <p style="color:var(--text-secondary); font-style:italic;">
+          <!-- TODO Simon : ajouter ici 3-4 captures (PRTG dashboard, Graylog alerts, MkDocs home, topologie GNS3 ou vrai schéma Visio). -->
+          Captures à venir — en attendant, la <a href="https://sym-0ne.github.io/sport-ludique-Chartres/" target="_blank" rel="noopener">documentation MkDocs</a> contient l'ensemble des visuels du projet.
+        </p>
+
+        <h2>Ce que j'en ai retiré</h2>
+        <p>
+          Ce projet a été un passage à l'échelle. Avant, j'avais des compétences isolées — configurer un switch,
+          installer un AD, écrire un script. Là, il a fallu <strong>tenir tout en même temps, en cohérence</strong> :
+          le choix d'adressage impacte les règles de pare-feu, qui impactent la supervision, qui doit être
+          documentée. C'est cette vision d'ensemble que la Licence ASRC et l'alternance vont me permettre
+          d'approfondir sur du vrai SI d'entreprise.
+        </p>
+
+        <!-- CTA -->
+        <section class="page-cta" aria-labelledby="cta-title">
+          <h2 id="cta-title">Ce profil vous intéresse pour une alternance ?</h2>
+          <p>Je recherche un contrat d'alternance dès septembre 2026 dans un rayon de 50&nbsp;km autour de Chartres.</p>
+          <div class="hero-actions">
+            <a href="/alternance.html" class="btn btn-primary">Voir ma page alternance →</a>
+            <a href="/#contact" class="btn btn-outline">Me contacter</a>
+          </div>
+        </section>
+
+        <a href="/#projets" class="back-home">← Retour aux projets</a>
+
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Simon Boissonnet · Fait avec ❤ et du HTML</p>
+      <nav class="footer-links" aria-label="Liens de pied de page">
+        <a href="/">Accueil</a>
+        <a href="/alternance.html">Ma recherche d'alternance</a>
+        <a href="/mentions-legales.html">Mentions légales</a>
+        <a href="https://github.com/sym-0ne" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+      <p style="margin-top:8px; font-size:.72rem; opacity:.5;">v1.1</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       JAVASCRIPT
+       ═══════════════════════════════════════════ -->
+  <script>
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    (() => {
+      const dot = document.getElementById('cursor-dot');
+      if (reduceMotion || !matchMedia('(pointer: fine)').matches) {
+        dot.style.display = 'none';
+        return;
+      }
+      let mx = -100, my = -100;
+      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+      (function loop() {
+        dot.style.left = mx + 'px';
+        dot.style.top = my + 'px';
+        requestAnimationFrame(loop);
+      })();
+      document.querySelectorAll('a, button, input, textarea, label').forEach(el => {
+        el.addEventListener('mouseenter', () => dot.classList.add('hover'));
+        el.addEventListener('mouseleave', () => dot.classList.remove('hover'));
+      });
+    })();
+
+    (() => {
+      const btn = document.getElementById('hamburger');
+      const nav = document.getElementById('navLinks');
+      const overlay = document.getElementById('navOverlay');
+      if (!btn || !nav || !overlay) return;
+
+      function toggle() {
+        const open = btn.classList.toggle('open');
+        nav.classList.toggle('open');
+        overlay.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+        btn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+      }
+      function close() {
+        btn.classList.remove('open');
+        nav.classList.remove('open');
+        overlay.classList.remove('open');
+        btn.setAttribute('aria-expanded', false);
+        btn.setAttribute('aria-label', 'Ouvrir le menu');
+      }
+      btn.addEventListener('click', toggle);
+      overlay.addEventListener('click', close);
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && nav.classList.contains('open')) close();
+      });
+    })();
+  </script>
+</body>
+</html>

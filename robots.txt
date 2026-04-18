@@ -1,0 +1,13 @@
+# robots.txt — simonboissonnet.fr
+# Portfolio de Simon Boissonnet
+# Tous les crawlers bien intentionnés sont bienvenus.
+
+User-agent: *
+Allow: /
+
+# Pages sans valeur SEO : on indique poliment de ne pas les indexer.
+Disallow: /google80a33fc5a3186775.html
+Disallow: /mentions-legales.html
+
+# Sitemap principal
+Sitemap: https://simonboissonnet.fr/sitemap.xml
